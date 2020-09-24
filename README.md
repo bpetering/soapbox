@@ -2,7 +2,7 @@
 A tool for static-site publishing in Python.
 
 ## Overview
-This is an opinionated, minimalist tool used to publish [benpetering.com](benpetering.com). It's a single Python file, and doesn't even have any dependencies except [Jinja](https://jinja.palletsprojects.com/), to provide a template engine.
+This is an opinionated, minimalist tool used to publish [benpetering.com](https://benpetering.com). It's a single Python file, and doesn't even have any dependencies except [Jinja](https://jinja.palletsprojects.com/), to provide a template engine.
 
 It supports:
 * generating both HTML pages and posts from templates
@@ -10,7 +10,7 @@ It supports:
 * `view` action, to view the site in a local web server
 
 It provides:
-* some pre-built templates that act as drop-in widgets (recent posts, etc - see `templates/`)
+* some pre-built templates that act as drop-in widgets (recent posts, etc - see [templates](templates))
 
 It doesn't support:
 * publishing logic (SSH/rsync/FTP)
