@@ -9,6 +9,9 @@ It supports:
 * `build` action, to rebuild the entire site
 * `view` action, to view the site in a local web server
 
+It provides:
+* some pre-built templates that act as drop-in widgets (recent posts, etc - see `templates/`)
+
 It doesn't support:
 * publishing logic (SSH/rsync/FTP)
 * rebuilding while the web server is running (TODO)
