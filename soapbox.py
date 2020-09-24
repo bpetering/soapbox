@@ -175,6 +175,11 @@ def run(action):
         clean()
 
 if __name__ == '__main__':
+    for d in (PAGES_DIR, POSTS_DIR, STATIC_DIR, TEMPLATES_DIR):
+        full = os.path.join(BASE, d)
+        if not os.path.exists(full):
+            os.mkdir(full)
+
     if len(sys.argv) < 2:
         show_help()
     run(sys.argv[1])
