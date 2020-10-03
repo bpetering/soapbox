@@ -4,6 +4,7 @@ import os.path
 import shutil
 import glob
 import re
+from datetime import date
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 from jinja2 import Environment, FileSystemLoader
@@ -117,6 +118,7 @@ def build():
     for template_path in build_templates:
         template = jinja_env.get_template(template_path)
         context_dict = {}
+        context_dict['today'] = date.today()
         context_dict['meta'] = read_meta(template_path)
         context_dict['title'] = context_dict['meta'].get('title', '')
         if 'posts' in template_path:
