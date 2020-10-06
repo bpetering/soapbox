@@ -15,6 +15,7 @@ It provides:
 It doesn't support:
 * publishing logic (SSH/rsync/FTP)
 * rebuilding while the web server is running (TODO)
+* tags or categories
 
 ## Usage
 
