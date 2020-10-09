@@ -158,7 +158,6 @@ def show_help():
     print('Usage: soapbox.py [--build/--view/--clean]')
     print('     build:      build site from templates (removes build directory contents)')
     print('     view:       start a local webserver and browser to view the site')
-    print('     stop:       stop webserver if it is running')
     print('     clean:      removes build directory')
     sys.exit(1)
 
@@ -177,6 +176,9 @@ def run(action):
         clean()
 
 if __name__ == '__main__':
+    if not os.path.exists(BASE):
+        os.mkdir(BASE)
+
     for d in (PAGES_DIR, POSTS_DIR, STATIC_DIR, TEMPLATES_DIR):
         full = os.path.join(BASE, d)
         if not os.path.exists(full):
